@@ -1,0 +1,205 @@
+2025-04-03 12:27:40,879 - INFO -  * Restarting with stat
+2025-04-03 12:27:43,568 - WARNING -  * Debugger is active!
+2025-04-03 12:27:43,572 - INFO -  * Debugger PIN: 115-265-897
+2025-04-03 12:27:43,680 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-03 12:28:29,175 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:29] "GET / HTTP/1.1" 200 -
+2025-04-03 12:28:29,316 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:29] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-03 12:28:29,359 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:29] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-04-03 12:28:29,808 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-03 12:28:35,272 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:35] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 12:28:35,319 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 12:28:35,327 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 12:28:36,003 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:36] "[35m[1mGET /cotizaciones HTTP/1.1[0m" 500 -
+2025-04-03 12:28:36,061 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:36] "GET /cotizaciones?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-03 12:28:36,098 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:36] "GET /cotizaciones?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-03 12:28:36,185 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:36] "GET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-03 12:28:36,185 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:36] "GET /cotizaciones?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-03 12:28:36,227 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:36] "GET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-03 12:28:38,900 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:38] "GET / HTTP/1.1" 200 -
+2025-04-03 12:28:38,961 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 12:28:38,972 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 12:28:39,377 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:39] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 12:28:39,424 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 12:28:39,424 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 12:28:40,059 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:40] "[35m[1mGET /facturas HTTP/1.1[0m" 500 -
+2025-04-03 12:28:40,123 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:40] "GET /facturas?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-03 12:28:40,129 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:40] "GET /facturas?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-03 12:28:40,181 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:40] "GET /facturas?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-03 12:28:40,189 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:40] "GET /facturas?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-03 12:28:40,227 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:40] "GET /facturas?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-03 12:28:43,819 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:43] "GET /clientes/nuevo HTTP/1.1" 200 -
+2025-04-03 12:28:43,871 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 12:28:43,877 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 12:28:49,362 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:49] "[32mPOST /clientes/nuevo HTTP/1.1[0m" 302 -
+2025-04-03 12:28:49,378 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:49] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 12:28:49,436 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 12:28:49,441 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 12:28:53,515 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:53] "[35m[1mGET /cotizaciones/nueva?cliente_id=1 HTTP/1.1[0m" 500 -
+2025-04-03 12:28:53,546 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:53] "GET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-03 12:28:53,562 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:53] "GET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-03 12:28:53,593 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:53] "GET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-03 12:28:53,624 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:53] "GET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-03 12:28:53,670 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:53] "GET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-03 12:28:56,952 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:56] "[35m[1mGET /cotizaciones/nueva?cliente_id=1 HTTP/1.1[0m" 500 -
+2025-04-03 12:28:57,013 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:57] "GET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-03 12:28:57,017 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:57] "GET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-03 12:28:57,072 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:57] "GET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-03 12:28:57,075 - INFO - 127.0.0.1 - - [03/Apr/2025 12:28:57] "GET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-03 12:29:04,300 - INFO - 127.0.0.1 - - [03/Apr/2025 12:29:04] "GET / HTTP/1.1" 200 -
+2025-04-03 12:29:04,383 - INFO - 127.0.0.1 - - [03/Apr/2025 12:29:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 12:29:04,383 - INFO - 127.0.0.1 - - [03/Apr/2025 12:29:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:18:35,974 - INFO - Backup local creado: backups\backup_20250403_131835.db
+2025-04-03 13:18:35,974 - ERROR - Archivo de credenciales credentials.json no encontrado
+2025-04-03 13:18:35,974 - ERROR - Error al subir backup a Google Drive: Archivo de credenciales credentials.json no encontrado
+2025-04-03 13:18:35,985 - INFO - 127.0.0.1 - - [03/Apr/2025 13:18:35] "[32mGET /backup HTTP/1.1[0m" 302 -
+2025-04-03 13:18:35,993 - INFO - 127.0.0.1 - - [03/Apr/2025 13:18:35] "GET / HTTP/1.1" 200 -
+2025-04-03 13:18:36,038 - INFO - 127.0.0.1 - - [03/Apr/2025 13:18:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:18:36,081 - INFO - 127.0.0.1 - - [03/Apr/2025 13:18:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 13:18:39,008 - INFO - 127.0.0.1 - - [03/Apr/2025 13:18:39] "GET / HTTP/1.1" 200 -
+2025-04-03 13:18:39,061 - INFO - 127.0.0.1 - - [03/Apr/2025 13:18:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:18:39,065 - INFO - 127.0.0.1 - - [03/Apr/2025 13:18:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 13:30:18,774 - INFO - Backup local creado: backups\backup_20250403_133018.db
+2025-04-03 13:38:25,585 - INFO - Backup local creado: backups\backup_20250403_133825.db
+2025-04-03 13:41:32,563 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-03 13:41:32,564 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-03 13:41:32,569 - INFO -  * Restarting with stat
+2025-04-03 13:41:35,359 - WARNING -  * Debugger is active!
+2025-04-03 13:41:35,359 - INFO -  * Debugger PIN: 120-484-661
+2025-04-03 13:41:35,536 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:35] "[35m[1mGET /cotizaciones HTTP/1.1[0m" 500 -
+2025-04-03 13:41:35,658 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:35] "GET /cotizaciones?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-03 13:41:35,676 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:35] "GET /cotizaciones?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-03 13:41:35,760 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:35] "GET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png&s=h5bH8RZ7HYsBUr8IyGW4 HTTP/1.1" 200 -
+2025-04-03 13:41:35,797 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:35] "GET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-03 13:41:36,726 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:36] "[35m[1mGET /cotizaciones HTTP/1.1[0m" 500 -
+2025-04-03 13:41:36,771 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:36] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:41:36,787 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:36] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-03 13:41:36,806 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:36] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png&s=h5bH8RZ7HYsBUr8IyGW4 HTTP/1.1[0m" 304 -
+2025-04-03 13:41:36,836 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:36] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-03 13:41:36,900 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:36] "[35m[1mGET /cotizaciones HTTP/1.1[0m" 500 -
+2025-04-03 13:41:36,935 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:36] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:41:36,946 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:36] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-03 13:41:36,964 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:36] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png&s=h5bH8RZ7HYsBUr8IyGW4 HTTP/1.1[0m" 304 -
+2025-04-03 13:41:36,987 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:36] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-03 13:41:37,375 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:37] "[35m[1mGET /cotizaciones HTTP/1.1[0m" 500 -
+2025-04-03 13:41:37,425 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:37] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:41:37,433 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:37] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-03 13:41:37,456 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:37] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png&s=h5bH8RZ7HYsBUr8IyGW4 HTTP/1.1[0m" 304 -
+2025-04-03 13:41:37,471 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:37] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-03 13:41:37,528 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:37] "[35m[1mGET /cotizaciones HTTP/1.1[0m" 500 -
+2025-04-03 13:41:37,597 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:37] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:41:37,597 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:37] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-03 13:41:37,631 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:37] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png&s=h5bH8RZ7HYsBUr8IyGW4 HTTP/1.1[0m" 304 -
+2025-04-03 13:41:37,717 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:37] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-03 13:41:37,828 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:37] "[35m[1mGET /cotizaciones HTTP/1.1[0m" 500 -
+2025-04-03 13:41:37,879 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:37] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:41:37,895 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:37] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-03 13:41:37,926 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:37] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png&s=h5bH8RZ7HYsBUr8IyGW4 HTTP/1.1[0m" 304 -
+2025-04-03 13:41:37,965 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:37] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-03 13:41:40,635 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:40] "GET / HTTP/1.1" 200 -
+2025-04-03 13:41:40,685 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:41:40,697 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 13:41:42,716 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:42] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 13:41:42,773 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:41:42,797 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 13:41:44,252 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:44] "GET /clientes/nuevo HTTP/1.1" 200 -
+2025-04-03 13:41:44,310 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:41:44,320 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 13:41:46,874 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:46] "[32mPOST /clientes/nuevo HTTP/1.1[0m" 302 -
+2025-04-03 13:41:46,890 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:46] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 13:41:46,964 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:41:46,968 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 13:41:49,525 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:49] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 13:41:49,585 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:41:49,585 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 13:41:49,973 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:49] "[35m[1mGET /cotizaciones HTTP/1.1[0m" 500 -
+2025-04-03 13:41:50,028 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:50] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:41:50,033 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:50] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-03 13:41:50,089 - INFO - 127.0.0.1 - - [03/Apr/2025 13:41:50] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png&s=h5bH8RZ7HYsBUr8IyGW4 HTTP/1.1[0m" 304 -
+2025-04-03 13:42:03,703 - INFO -  * Detected change in 'C:\\Users\\joemurilloa\\Documents\\remodelaciones\\app.py', reloading
+2025-04-03 13:42:03,966 - INFO -  * Restarting with stat
+2025-04-03 13:42:07,197 - WARNING -  * Debugger is active!
+2025-04-03 13:42:07,215 - INFO -  * Debugger PIN: 120-484-661
+2025-04-03 13:42:07,260 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:07] "[35m[1mGET /cotizaciones HTTP/1.1[0m" 500 -
+2025-04-03 13:42:07,374 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:07] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:42:07,394 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:07] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-03 13:42:07,418 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:07] "GET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png&s=7fT6xuwRJojbMNCD61Q4 HTTP/1.1" 200 -
+2025-04-03 13:42:07,463 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:07] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-03 13:42:10,404 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:10] "[35m[1mGET /cotizaciones HTTP/1.1[0m" 500 -
+2025-04-03 13:42:10,471 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:10] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:42:10,479 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:10] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-03 13:42:10,547 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:10] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png&s=7fT6xuwRJojbMNCD61Q4 HTTP/1.1[0m" 304 -
+2025-04-03 13:42:12,355 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:12] "[35m[1mGET /facturas HTTP/1.1[0m" 500 -
+2025-04-03 13:42:12,408 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:12] "GET /facturas?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-03 13:42:12,416 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:12] "GET /facturas?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-03 13:42:12,500 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:12] "GET /facturas?__debugger__=yes&cmd=resource&f=console.png&s=7fT6xuwRJojbMNCD61Q4 HTTP/1.1" 200 -
+2025-04-03 13:42:27,785 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-03 13:42:27,786 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-03 13:42:27,789 - INFO -  * Restarting with stat
+2025-04-03 13:42:30,659 - WARNING -  * Debugger is active!
+2025-04-03 13:42:30,663 - INFO -  * Debugger PIN: 120-484-661
+2025-04-03 13:42:30,724 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:30] "[35m[1mGET /cotizaciones HTTP/1.1[0m" 500 -
+2025-04-03 13:42:30,847 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:30] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:42:30,861 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:30] "[36mGET /cotizaciones?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-03 13:42:30,875 - INFO - 127.0.0.1 - - [03/Apr/2025 13:42:30] "GET /cotizaciones?__debugger__=yes&cmd=resource&f=console.png&s=qwMT1ojWZYcCpDBioH0T HTTP/1.1" 200 -
+2025-04-03 13:43:47,396 - INFO - 127.0.0.1 - - [03/Apr/2025 13:43:47] "GET /cotizaciones HTTP/1.1" 200 -
+2025-04-03 13:43:47,449 - INFO - 127.0.0.1 - - [03/Apr/2025 13:43:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:43:47,456 - INFO - 127.0.0.1 - - [03/Apr/2025 13:43:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 13:43:49,483 - INFO - 127.0.0.1 - - [03/Apr/2025 13:43:49] "[35m[1mGET /cotizaciones/nueva HTTP/1.1[0m" 500 -
+2025-04-03 13:43:49,533 - INFO - 127.0.0.1 - - [03/Apr/2025 13:43:49] "GET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-03 13:43:49,573 - INFO - 127.0.0.1 - - [03/Apr/2025 13:43:49] "GET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-03 13:43:49,611 - INFO - 127.0.0.1 - - [03/Apr/2025 13:43:49] "GET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=console.png&s=qwMT1ojWZYcCpDBioH0T HTTP/1.1" 200 -
+2025-04-03 13:44:08,849 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:08] "[35m[1mGET /cotizaciones/nueva HTTP/1.1[0m" 500 -
+2025-04-03 13:44:08,901 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:08] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:44:08,910 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:08] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-03 13:44:08,936 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:08] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=console.png&s=qwMT1ojWZYcCpDBioH0T HTTP/1.1[0m" 304 -
+2025-04-03 13:44:08,979 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:08] "GET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-03 13:44:20,681 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:20] "[35m[1mGET /cotizaciones/nueva HTTP/1.1[0m" 500 -
+2025-04-03 13:44:20,749 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:20] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:44:20,766 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:20] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-03 13:44:20,801 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:20] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=console.png&s=qwMT1ojWZYcCpDBioH0T HTTP/1.1[0m" 304 -
+2025-04-03 13:44:20,843 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:20] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-03 13:44:21,365 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:21] "[35m[1mGET /cotizaciones/nueva HTTP/1.1[0m" 500 -
+2025-04-03 13:44:21,419 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:21] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:44:21,435 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:21] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-03 13:44:21,472 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:21] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=console.png&s=qwMT1ojWZYcCpDBioH0T HTTP/1.1[0m" 304 -
+2025-04-03 13:44:21,510 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:21] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-03 13:44:23,179 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:23] "[35m[1mGET /cotizaciones/nueva HTTP/1.1[0m" 500 -
+2025-04-03 13:44:23,240 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:23] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:44:23,250 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:23] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-03 13:44:23,315 - INFO - 127.0.0.1 - - [03/Apr/2025 13:44:23] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=console.png&s=qwMT1ojWZYcCpDBioH0T HTTP/1.1[0m" 304 -
+2025-04-03 13:45:02,134 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-03 13:45:02,135 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-03 13:45:02,138 - INFO -  * Restarting with stat
+2025-04-03 13:45:05,573 - WARNING -  * Debugger is active!
+2025-04-03 13:45:05,573 - INFO -  * Debugger PIN: 120-484-661
+2025-04-03 13:45:05,625 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:05] "GET / HTTP/1.1" 200 -
+2025-04-03 13:45:05,642 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:05] "GET / HTTP/1.1" 200 -
+2025-04-03 13:45:05,642 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:05] "GET / HTTP/1.1" 200 -
+2025-04-03 13:45:05,753 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:45:05,753 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 13:45:06,237 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:06] "GET / HTTP/1.1" 200 -
+2025-04-03 13:45:06,303 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:45:06,312 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 13:45:07,277 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:07] "GET / HTTP/1.1" 200 -
+2025-04-03 13:45:07,335 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:45:07,335 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 13:45:07,831 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:07] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 13:45:07,889 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:45:07,897 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 13:45:08,373 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:08] "GET /cotizaciones HTTP/1.1" 200 -
+2025-04-03 13:45:08,415 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:45:08,427 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 13:45:09,565 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:09] "[35m[1mGET /cotizaciones/nueva HTTP/1.1[0m" 500 -
+2025-04-03 13:45:09,621 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:09] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:45:09,621 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:09] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-03 13:45:09,671 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:09] "GET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=console.png&s=cA4OOcZisVphvo2qyGOL HTTP/1.1" 200 -
+2025-04-03 13:45:19,192 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:19] "GET /cotizaciones HTTP/1.1" 200 -
+2025-04-03 13:45:19,243 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:45:19,260 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 13:45:20,759 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:20] "[35m[1mGET /cotizaciones/nueva HTTP/1.1[0m" 500 -
+2025-04-03 13:45:20,809 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:20] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-03 13:45:20,819 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:20] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-03 13:45:20,863 - INFO - 127.0.0.1 - - [03/Apr/2025 13:45:20] "[36mGET /cotizaciones/nueva?__debugger__=yes&cmd=resource&f=console.png&s=cA4OOcZisVphvo2qyGOL HTTP/1.1[0m" 304 -

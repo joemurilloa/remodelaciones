@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{% block title %}Clientes - Sistema de Cotizaciones{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1><i class="fas fa-users me-2"></i>Gestión de Clientes</h1>
+    <a href="{{ url_for('nuevo_cliente') }}" class="btn btn-primary">
+        <i class="fas fa-plus me-1"></i> Nuevo Cliente
+    </a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-header bg-light">
+        <div class="row">
+            <div class="col-md-6">
+                <h5 class="mb-0"><i class="fas fa-list me-1"></i> Lista de Clientes</h5>
+            </div>
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" id="buscar-cliente" class="form-control" placeholder="Buscar cliente...">
+                    <span class="input-group-text">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        {% if clientes %}
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>RUT</th>
+                            <th>Email</th>
+                            <th>Teléfono</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-clientes">
+                        {% for cliente in clientes %}
+                            <tr>
+                                <td>{{ cliente.id }}</td>
+                                <td>{{ cliente.nombre }}</td>
+                                <td>{{ cliente.rut or 'No especificado' }}</td>
+                                <td>{{ cliente.email or 'No especificado' }}</td>
+                                <td>{{ cliente.telefono or 'No especificado' }}</td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="{{ url_for('editar_cliente', id=cliente.id) }}" class="btn btn-outline-primary" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <button type="button" class="btn btn-outline-danger" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-target="#eliminarModal" 
+                                                data-cliente-id="{{ cliente.id }}"
+                                                data-cliente-nombre="{{ cliente.nombre }}"
+                                                title="Eliminar">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                        <a href="{{ url_for('nueva_cotizacion') }}?cliente_id={{ cliente.id }}" class="btn btn-outline-success" title="Nueva Cotización">
+                                            <i class="fas fa-file-alt"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle me-1"></i> No hay clientes registrados.
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Modal de confirmación para eliminar -->
+<div class="modal fade" id="eliminarModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">
+                    <i class="fas fa-exclamation-triangle me-1"></i> Confirmar Eliminación
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro de que deseas eliminar al cliente <strong id="nombre-cliente"></strong>?</p>
+                <p class="text-danger"><small>Esta acción no se puede deshacer.</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <a href="#" id="btn-confirmar-eliminar" class="btn btn-danger">Eliminar</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Filtrar clientes en tiempo real
+    document.addEventListener('DOMContentLoaded', function() {
+        const buscarInput = document.getElementById('buscar-cliente');
+        buscarInput.addEventListener('keyup', function() {
+            const texto = this.value.toLowerCase();
+            const filas = document.querySelectorAll('#tabla-clientes tr');
+            
+            filas.forEach(function(fila) {
+                const contenido = fila.textContent.toLowerCase();
+                fila.style.display = contenido.includes(texto) ? '' : 'none';
+            });
+        });
+        
+        // Configurar el modal de eliminación
+        const eliminarModal = document.getElementById('eliminarModal');
+        eliminarModal.addEventListener('show.bs.modal', function(event) {
+            const button = event.relatedTarget;
+            const clienteId = button.getAttribute('data-cliente-id');
+            const clienteNombre = button.getAttribute('data-cliente-nombre');
+            
+            document.getElementById('nombre-cliente').textContent = clienteNombre;
+            document.getElementById('btn-confirmar-eliminar').href = "{{ url_for('eliminar_cliente', id=0) }}".replace('0', clienteId);
+        });
+    });
+</script>
+{% endblock %}

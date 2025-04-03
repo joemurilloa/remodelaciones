@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - Sistema de Cotizaciones y Facturas{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 text-center mb-4">
+        <h1 class="display-4">Sistema de Gestión de Cotizaciones y Facturas</h1>
+        <p class="lead">Una solución sencilla y eficiente para administrar tus cotizaciones y facturas.</p>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                <h3 class="card-title">Clientes</h3>
+                <p class="card-text">Administra tu cartera de clientes de forma sencilla.</p>
+                <a href="{{ url_for('listar_clientes') }}" class="btn btn-primary">
+                    <i class="fas fa-arrow-right me-1"></i> Ir a Clientes
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-file-alt fa-3x text-success mb-3"></i>
+                <h3 class="card-title">Cotizaciones</h3>
+                <p class="card-text">Crea y gestiona tus cotizaciones con facilidad.</p>
+                <a href="{{ url_for('listar_cotizaciones') }}" class="btn btn-success">
+                    <i class="fas fa-arrow-right me-1"></i> Ir a Cotizaciones
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-file-invoice fa-3x text-danger mb-3"></i>
+                <h3 class="card-title">Facturas</h3>
+                <p class="card-text">Gestiona tus facturas y convierte cotizaciones fácilmente.</p>
+                <a href="{{ url_for('listar_facturas') }}" class="btn btn-danger">
+                    <i class="fas fa-arrow-right me-1"></i> Ir a Facturas
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card border-info">
+            <div class="card-header bg-info text-white">
+                <i class="fas fa-info-circle me-1"></i> Información del Sistema
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Características principales:</h5>
+                <ul>
+                    <li>Gestión completa de clientes, cotizaciones y facturas</li>
+                    <li>Generación automática de documentos en PDF</li>
+                    <li>Sistema de respaldo automático a Google Drive cada 5 minutos</li>
+                    <li>Interfaz sencilla y fácil de usar</li>
+                    <li>Alojado gratuitamente en Netlify</li>
+                </ul>
+                <a href="{{ url_for('realizar_backup') }}" class="btn btn-outline-info">
+                    <i class="fas fa-database me-1"></i> Realizar Backup Manual
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

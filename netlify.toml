@@ -1,0 +1,21 @@
+# Configuración para despliegue en Netlify
+
+[build]
+  command = "pip install -r requirements.txt"
+  publish = "."
+  functions = "netlify/functions"
+
+# Configuración de la función serverless para Flask
+[functions]
+  external_node_modules = ["@netlify/functions"]
+  node_bundler = "esbuild"
+
+# Redireccionar todo el tráfico a nuestra función de Flask
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/api"
+  status = 200
+
+# Configuración de variables de entorno
+[build.environment]
+  FLASK_ENV = "production"
