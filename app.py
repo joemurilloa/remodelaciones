@@ -127,7 +127,8 @@ def nueva_cotizacion():
         flash('Cotización creada correctamente')
         return redirect(url_for('ver_cotizacion', id=nueva_cotizacion.id))
     
-        return render_template('cotizaciones/nueva.html', clientes=clientes, now=now)
+    # Este return estaba mal indentado y hacía que la función fallara en solicitudes GET
+    return render_template('cotizaciones/nueva_cotizacion.html', clientes=clientes, now=now)
 
 
 @app.route('/cotizaciones/ver/<int:id>')
@@ -204,6 +205,16 @@ def pdf_factura(id):
         pdf_generator.generar_pdf_factura(factura)
     
     return send_from_directory(app.config['UPLOAD_FOLDER'], pdf_filename)
+
+# Añadida la función marcar_factura_pagada que faltaba
+@app.route('/facturas/marcar-pagada/<int:id>', methods=['POST'])
+def marcar_factura_pagada(id):
+    factura = Factura.query.get_or_404(id)
+    factura.pagada = True
+    factura.fecha_pago = datetime.now()
+    db.session.commit()
+    flash('Factura marcada como pagada correctamente')
+    return redirect(url_for('ver_factura', id=factura.id))
 
 # Ruta para iniciar backup manual
 @app.route('/backup')

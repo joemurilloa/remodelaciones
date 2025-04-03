@@ -7,70 +7,104 @@ import os
 from datetime import datetime
 import locale
 
-# Configurar el locale para formato de números en español
+# Configure locale for US format
 try:
-    locale.setlocale(locale.LC_ALL, 'es_ES.UTF-8')
+    locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 except:
-    try:
-        locale.setlocale(locale.LC_ALL, 'es_CL.UTF-8')
-    except:
-        pass  # Si falla, usamos el locale por defecto
+    pass  # If it fails, we'll use the default locale
 
-def formato_moneda(valor):
-    return f"${valor:,.0f}"
+def format_currency(value):
+    return f"${value:,.2f}"
 
 def generar_pdf_cotizacion(cotizacion):
-    # Crear directorio para PDFs si no existe
+    # Create directory for PDFs if it doesn't exist
     pdf_dir = os.path.join('static', 'pdfs')
     os.makedirs(pdf_dir, exist_ok=True)
     
-    # Configurar el documento
+    # Configure the document
     filename = os.path.join(pdf_dir, f"cotizacion_{cotizacion.id}.pdf")
     doc = SimpleDocTemplate(filename, pagesize=letter)
     
-    # Contenedor para los elementos del PDF
+    # Container for PDF elements
     elements = []
     
-    # Estilos
+    # Styles
     styles = getSampleStyleSheet()
     styles.add(ParagraphStyle(name='Center', alignment=1))
+    styles.add(ParagraphStyle(name='Right', alignment=2))
     
-    # Título
-    title = Paragraph(f"<font size='16'><b>COTIZACIÓN #{cotizacion.id}</b></font>", styles['Center'])
+    # Header with logo and company info (top of document)
+    # Logo is placed to the left, company info to the right
+    logo_path = os.path.join('static', 'img', 'logo.png')
+    
+    # Create a table for the header (logo + company info)
+    header_data = [[]]
+    
+    # First column: Logo
+    if os.path.exists(logo_path):
+        logo = Image(logo_path)
+        # Make logo circular by setting equal dimensions
+        logo.drawHeight = 1 * inch
+        logo.drawWidth = 1 * inch
+        header_data[0].append(logo)
+    else:
+        header_data[0].append("")
+    
+    # Second column: Company info
+    company_info = """
+    <font size="12"><b>WNL FLOORING</b></font><br/>
+    Phone: (786) 762-6304<br/>
+    Email: wnlflooring@gmail.com<br/>
+    Web: https://wnlflooring.netlify.app/
+    """
+    header_data[0].append(Paragraph(company_info, styles['Normal']))
+    
+    # Create the header table
+    header_table = Table(header_data, colWidths=[1.5*inch, 5*inch])
+    header_table.setStyle(TableStyle([
+        ('ALIGN', (0, 0), (0, 0), 'LEFT'),
+        ('ALIGN', (1, 0), (1, 0), 'RIGHT'),
+        ('VALIGN', (0, 0), (1, 0), 'TOP'),
+    ]))
+    elements.append(header_table)
+    elements.append(Spacer(1, 0.25*inch))
+    
+    # Title
+    title = Paragraph(f"<font size='16'><b>QUOTE #{cotizacion.id}</b></font>", styles['Center'])
     elements.append(title)
     elements.append(Spacer(1, 0.25*inch))
     
-    # Información del cliente y fecha
+    # Client information
     data = [
-        ["DATOS EMPRESA", "DATOS CLIENTE"],
-        ["Tu Empresa SPA", f"Nombre: {cotizacion.cliente.nombre}"],
-        ["RUT: 76.XXX.XXX-X", f"RUT: {cotizacion.cliente.rut or 'No especificado'}"],
-        ["Dirección: Tu dirección", f"Dirección: {cotizacion.cliente.direccion or 'No especificada'}"],
-        ["Teléfono: +56 9 XXXX XXXX", f"Teléfono: {cotizacion.cliente.telefono or 'No especificado'}"],
-        ["Email: contacto@tuempresa.cl", f"Email: {cotizacion.cliente.email or 'No especificado'}"]
+        ["CLIENT INFORMATION"],
+        [f"Name: {cotizacion.cliente.nombre}"],
+        [f"Tax ID: {cotizacion.cliente.rut or 'Not specified'}"],
+        [f"Address: {cotizacion.cliente.direccion or 'Not specified'}"],
+        [f"Phone: {cotizacion.cliente.telefono or 'Not specified'}"],
+        [f"Email: {cotizacion.cliente.email or 'Not specified'}"]
     ]
     
-    # Crear tabla de datos
-    info_table = Table(data, colWidths=[doc.width/2.0]*2)
+    # Create data table
+    info_table = Table(data, colWidths=[doc.width])
     info_table.setStyle(TableStyle([
-        ('BACKGROUND', (0, 0), (1, 0), colors.lightgrey),
-        ('TEXTCOLOR', (0, 0), (1, 0), colors.black),
-        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
-        ('FONTNAME', (0, 0), (1, 0), 'Helvetica-Bold'),
-        ('BOTTOMPADDING', (0, 0), (1, 0), 12),
-        ('BACKGROUND', (0, 1), (-1, -1), colors.white),
+        ('BACKGROUND', (0, 0), (0, 0), colors.lightgrey),
+        ('TEXTCOLOR', (0, 0), (0, 0), colors.black),
+        ('ALIGN', (0, 0), (0, 0), 'LEFT'),
+        ('FONTNAME', (0, 0), (0, 0), 'Helvetica-Bold'),
+        ('BOTTOMPADDING', (0, 0), (0, 0), 12),
+        ('BACKGROUND', (0, 1), (0, -1), colors.white),
         ('GRID', (0, 0), (-1, -1), 1, colors.black)
     ]))
     elements.append(info_table)
     elements.append(Spacer(1, 0.25*inch))
     
-    # Fecha y validez
-    fecha_formato = cotizacion.fecha.strftime("%d/%m/%Y")
-    fecha_vencimiento = cotizacion.fecha_vencimiento.strftime("%d/%m/%Y")
+    # Date and validity
+    fecha_formato = cotizacion.fecha.strftime("%m/%d/%Y")
+    fecha_vencimiento = cotizacion.fecha_vencimiento.strftime("%m/%d/%Y")
     
     fecha_info = [
-        ["Fecha de emisión:", fecha_formato],
-        ["Válida hasta:", fecha_vencimiento]
+        ["Issue Date:", fecha_formato],
+        ["Valid Until:", fecha_vencimiento]
     ]
     
     fecha_table = Table(fecha_info, colWidths=[doc.width/4.0, doc.width/4.0])
@@ -81,33 +115,37 @@ def generar_pdf_cotizacion(cotizacion):
     elements.append(fecha_table)
     elements.append(Spacer(1, 0.25*inch))
     
-    # Descripción de la cotización
+    # Quote description
     if cotizacion.descripcion:
-        elements.append(Paragraph("<b>Descripción:</b>", styles['Normal']))
+        elements.append(Paragraph("<b>Description:</b>", styles['Normal']))
         elements.append(Paragraph(cotizacion.descripcion, styles['Normal']))
         elements.append(Spacer(1, 0.25*inch))
     
-    # Items de la cotización
-    elements.append(Paragraph("<b>Detalle de la cotización:</b>", styles['Normal']))
+    # Quote items
+    elements.append(Paragraph("<b>Quote Details:</b>", styles['Normal']))
     
-    # Cabecera de la tabla de items
-    items_data = [['Ítem', 'Cantidad', 'Precio Unitario', 'Subtotal']]
+    # Item table header
+    items_data = [['Item', 'Quantity', 'Unit Price', 'Subtotal']]
     
-    # Añadir los items
+    # Add items
     for item in cotizacion.items:
         items_data.append([
             item.nombre,
             str(item.cantidad),
-            formato_moneda(item.precio_unitario),
-            formato_moneda(item.subtotal)
+            format_currency(item.precio_unitario),
+            format_currency(item.subtotal)
         ])
     
-    # Añadir totales
-    items_data.append(['', '', '<b>Subtotal:</b>', formato_moneda(cotizacion.subtotal)])
-    items_data.append(['', '', '<b>IVA (19%):</b>', formato_moneda(cotizacion.iva)])
-    items_data.append(['', '', '<b>TOTAL:</b>', formato_moneda(cotizacion.total)])
+    # Add totals
+    items_data.append(['', '', '<b>Subtotal:</b>', format_currency(cotizacion.subtotal)])
+    # Using US tax rate (adjust as needed)
+    tax_rate = 0.06  # 6% sales tax (example - adjust for specific state)
+    tax_amount = cotizacion.subtotal * tax_rate
+    total = cotizacion.subtotal + tax_amount
+    items_data.append(['', '', f'<b>Tax ({int(tax_rate*100)}%):</b>', format_currency(tax_amount)])
+    items_data.append(['', '', '<b>TOTAL:</b>', format_currency(total)])
     
-    # Crear tabla de items
+    # Create items table
     items_table = Table(items_data, colWidths=[doc.width*0.4, doc.width*0.1, doc.width*0.25, doc.width*0.25])
     items_table.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (3, 0), colors.lightgrey),
@@ -122,72 +160,111 @@ def generar_pdf_cotizacion(cotizacion):
     ]))
     elements.append(items_table)
     
-    # Notas finales
+    # Final notes
     elements.append(Spacer(1, 0.5*inch))
-    elements.append(Paragraph("<b>Notas:</b>", styles['Normal']))
-    elements.append(Paragraph("1. Esta cotización tiene validez hasta la fecha indicada.", styles['Normal']))
-    elements.append(Paragraph("2. Los precios pueden variar sin previo aviso después de la fecha de vencimiento.", styles['Normal']))
-    elements.append(Paragraph("3. Forma de pago: Transferencia bancaria o efectivo.", styles['Normal']))
+    elements.append(Paragraph("<b>Terms and Conditions:</b>", styles['Normal']))
+    elements.append(Paragraph("1. This quote is valid until the date specified above.", styles['Normal']))
+    elements.append(Paragraph("2. Prices may change without notice after the expiration date.", styles['Normal']))
+    elements.append(Paragraph("3. Payment methods: Bank transfer, check, or credit card.", styles['Normal']))
+    elements.append(Paragraph("4. 50% deposit required to start the project.", styles['Normal']))
+    elements.append(Paragraph("5. Full payment is due upon completion of the work.", styles['Normal']))
     
-    # Generar el PDF
+    # Generate PDF
     doc.build(elements)
     
     return f"cotizacion_{cotizacion.id}.pdf"
 
 def generar_pdf_factura(factura):
-    # Crear directorio para PDFs si no existe
+    # Create directory for PDFs if it doesn't exist
     pdf_dir = os.path.join('static', 'pdfs')
     os.makedirs(pdf_dir, exist_ok=True)
     
-    # Configurar el documento
+    # Configure the document
     filename = os.path.join(pdf_dir, f"factura_{factura.id}.pdf")
     doc = SimpleDocTemplate(filename, pagesize=letter)
     
-    # Contenedor para los elementos del PDF
+    # Container for PDF elements
     elements = []
     
-    # Estilos
+    # Styles
     styles = getSampleStyleSheet()
     styles.add(ParagraphStyle(name='Center', alignment=1))
+    styles.add(ParagraphStyle(name='Right', alignment=2))
     
-    # Título
-    title = Paragraph(f"<font size='16'><b>FACTURA #{factura.id}</b></font>", styles['Center'])
+    # Header with logo and company info (top of document)
+    # Logo is placed to the left, company info to the right
+    logo_path = os.path.join('static', 'img', 'logo.png')
+    
+    # Create a table for the header (logo + company info)
+    header_data = [[]]
+    
+    # First column: Logo
+    if os.path.exists(logo_path):
+        logo = Image(logo_path)
+        # Make logo circular by setting equal dimensions
+        logo.drawHeight = 1 * inch
+        logo.drawWidth = 1 * inch
+        header_data[0].append(logo)
+    else:
+        header_data[0].append("")
+    
+    # Second column: Company info
+    company_info = """
+    <font size="12"><b>WNL FLOORING</b></font><br/>
+    Phone: (786) 762-6304<br/>
+    Email: wnlflooring@gmail.com<br/>
+    Web: https://wnlflooring.netlify.app/
+    """
+    header_data[0].append(Paragraph(company_info, styles['Normal']))
+    
+    # Create the header table
+    header_table = Table(header_data, colWidths=[1.5*inch, 5*inch])
+    header_table.setStyle(TableStyle([
+        ('ALIGN', (0, 0), (0, 0), 'LEFT'),
+        ('ALIGN', (1, 0), (1, 0), 'RIGHT'),
+        ('VALIGN', (0, 0), (1, 0), 'TOP'),
+    ]))
+    elements.append(header_table)
+    elements.append(Spacer(1, 0.25*inch))
+    
+    # Title
+    title = Paragraph(f"<font size='16'><b>INVOICE #{factura.id}</b></font>", styles['Center'])
     elements.append(title)
     elements.append(Spacer(1, 0.25*inch))
     
-    # Información del cliente y fecha
+    # Client information
     data = [
-        ["DATOS EMPRESA", "DATOS CLIENTE"],
-        ["Tu Empresa SPA", f"Nombre: {factura.cliente.nombre}"],
-        ["RUT: 76.XXX.XXX-X", f"RUT: {factura.cliente.rut or 'No especificado'}"],
-        ["Dirección: Tu dirección", f"Dirección: {factura.cliente.direccion or 'No especificada'}"],
-        ["Teléfono: +56 9 XXXX XXXX", f"Teléfono: {factura.cliente.telefono or 'No especificado'}"],
-        ["Email: contacto@tuempresa.cl", f"Email: {factura.cliente.email or 'No especificado'}"]
+        ["CLIENT INFORMATION"],
+        [f"Name: {factura.cliente.nombre}"],
+        [f"Tax ID: {factura.cliente.rut or 'Not specified'}"],
+        [f"Address: {factura.cliente.direccion or 'Not specified'}"],
+        [f"Phone: {factura.cliente.telefono or 'Not specified'}"],
+        [f"Email: {factura.cliente.email or 'Not specified'}"]
     ]
     
-    # Crear tabla de datos
-    info_table = Table(data, colWidths=[doc.width/2.0]*2)
+    # Create data table
+    info_table = Table(data, colWidths=[doc.width])
     info_table.setStyle(TableStyle([
-        ('BACKGROUND', (0, 0), (1, 0), colors.lightgrey),
-        ('TEXTCOLOR', (0, 0), (1, 0), colors.black),
-        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
-        ('FONTNAME', (0, 0), (1, 0), 'Helvetica-Bold'),
-        ('BOTTOMPADDING', (0, 0), (1, 0), 12),
-        ('BACKGROUND', (0, 1), (-1, -1), colors.white),
+        ('BACKGROUND', (0, 0), (0, 0), colors.lightgrey),
+        ('TEXTCOLOR', (0, 0), (0, 0), colors.black),
+        ('ALIGN', (0, 0), (0, 0), 'LEFT'),
+        ('FONTNAME', (0, 0), (0, 0), 'Helvetica-Bold'),
+        ('BOTTOMPADDING', (0, 0), (0, 0), 12),
+        ('BACKGROUND', (0, 1), (0, -1), colors.white),
         ('GRID', (0, 0), (-1, -1), 1, colors.black)
     ]))
     elements.append(info_table)
     elements.append(Spacer(1, 0.25*inch))
     
-    # Fecha e información de cotización relacionada
-    fecha_formato = factura.fecha.strftime("%d/%m/%Y")
+    # Date and related quote information
+    fecha_formato = factura.fecha.strftime("%m/%d/%Y")
     
     fecha_info = [
-        ["Fecha de emisión:", fecha_formato],
+        ["Issue Date:", fecha_formato],
     ]
     
     if factura.cotizacion:
-        fecha_info.append(["Basada en cotización:", f"#{factura.cotizacion.id}"])
+        fecha_info.append(["Based on Quote:", f"#{factura.cotizacion.id}"])
     
     fecha_table = Table(fecha_info, colWidths=[doc.width/4.0, doc.width/4.0])
     fecha_table.setStyle(TableStyle([
@@ -197,33 +274,37 @@ def generar_pdf_factura(factura):
     elements.append(fecha_table)
     elements.append(Spacer(1, 0.25*inch))
     
-    # Descripción de la factura
+    # Invoice description
     if factura.descripcion:
-        elements.append(Paragraph("<b>Descripción:</b>", styles['Normal']))
+        elements.append(Paragraph("<b>Description:</b>", styles['Normal']))
         elements.append(Paragraph(factura.descripcion, styles['Normal']))
         elements.append(Spacer(1, 0.25*inch))
     
-    # Items de la factura
-    elements.append(Paragraph("<b>Detalle de la factura:</b>", styles['Normal']))
+    # Invoice items
+    elements.append(Paragraph("<b>Invoice Details:</b>", styles['Normal']))
     
-    # Cabecera de la tabla de items
-    items_data = [['Ítem', 'Cantidad', 'Precio Unitario', 'Subtotal']]
+    # Header for items table
+    items_data = [['Item', 'Quantity', 'Unit Price', 'Subtotal']]
     
-    # Añadir los items
+    # Add items
     for item in factura.items:
         items_data.append([
             item.nombre,
             str(item.cantidad),
-            formato_moneda(item.precio_unitario),
-            formato_moneda(item.subtotal)
+            format_currency(item.precio_unitario),
+            format_currency(item.subtotal)
         ])
     
-    # Añadir totales
-    items_data.append(['', '', '<b>Subtotal:</b>', formato_moneda(factura.subtotal)])
-    items_data.append(['', '', '<b>IVA (19%):</b>', formato_moneda(factura.iva)])
-    items_data.append(['', '', '<b>TOTAL:</b>', formato_moneda(factura.total)])
+    # Add totals
+    items_data.append(['', '', '<b>Subtotal:</b>', format_currency(factura.subtotal)])
+    # Using US tax rate
+    tax_rate = 0.06  # 6% sales tax (example - adjust for specific state)
+    tax_amount = factura.subtotal * tax_rate
+    total = factura.subtotal + tax_amount
+    items_data.append(['', '', f'<b>Tax ({int(tax_rate*100)}%):</b>', format_currency(tax_amount)])
+    items_data.append(['', '', '<b>TOTAL:</b>', format_currency(total)])
     
-    # Crear tabla de items
+    # Create items table
     items_table = Table(items_data, colWidths=[doc.width*0.4, doc.width*0.1, doc.width*0.25, doc.width*0.25])
     items_table.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (3, 0), colors.lightgrey),
@@ -238,32 +319,33 @@ def generar_pdf_factura(factura):
     ]))
     elements.append(items_table)
     
-    # Estado de pago
+    # Payment status
     elements.append(Spacer(1, 0.25*inch))
-    estado_pago = "PAGADA" if factura.pagada else "PENDIENTE DE PAGO"
+    estado_pago = "PAID" if factura.pagada else "PENDING PAYMENT"
     estado_style = 'Heading2'
     estado_color = colors.green if factura.pagada else colors.red
     
     estado_paragraph = Paragraph(f"<font color={estado_color}><b>{estado_pago}</b></font>", styles[estado_style])
     elements.append(estado_paragraph)
     
-    # Datos bancarios
+    # Payment information
     elements.append(Spacer(1, 0.25*inch))
-    elements.append(Paragraph("<b>Datos de pago:</b>", styles['Normal']))
-    elements.append(Paragraph("Banco: Banco Ejemplo", styles['Normal']))
-    elements.append(Paragraph("Tipo de cuenta: Corriente", styles['Normal']))
-    elements.append(Paragraph("Número de cuenta: 000-0-000000-0", styles['Normal']))
-    elements.append(Paragraph("RUT: 76.XXX.XXX-X", styles['Normal']))
-    elements.append(Paragraph("Titular: Tu Empresa SPA", styles['Normal']))
-    elements.append(Paragraph("Email: pagos@tuempresa.cl", styles['Normal']))
+    elements.append(Paragraph("<b>Payment Information:</b>", styles['Normal']))
+    elements.append(Paragraph("Bank: Chase Bank", styles['Normal']))
+    elements.append(Paragraph("Account Type: Business Checking", styles['Normal']))
+    elements.append(Paragraph("Account Number: XXX-XXXX-XXX", styles['Normal']))
+    elements.append(Paragraph("Routing Number: XXXXXXXX", styles['Normal']))
+    elements.append(Paragraph("Account Name: WNL FLOORING LLC", styles['Normal']))
+    elements.append(Paragraph("Email: wnlflooring@gmail.com", styles['Normal']))
     
-    # Notas finales
+    # Final notes
     elements.append(Spacer(1, 0.25*inch))
-    elements.append(Paragraph("<b>Notas:</b>", styles['Normal']))
-    elements.append(Paragraph("1. Favor enviar comprobante de transferencia al email indicado.", styles['Normal']))
-    elements.append(Paragraph("2. Esta factura es válida como comprobante tributario.", styles['Normal']))
+    elements.append(Paragraph("<b>Notes:</b>", styles['Normal']))
+    elements.append(Paragraph("1. Please include the invoice number in your payment reference.", styles['Normal']))
+    elements.append(Paragraph("2. Payment is due within 15 days of invoice date.", styles['Normal']))
+    elements.append(Paragraph("3. For questions regarding this invoice, please contact us at (786) 762-6304.", styles['Normal']))
     
-    # Generar el PDF
+    # Generate PDF
     doc.build(elements)
     
     return f"factura_{factura.id}.pdf"
