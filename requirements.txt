@@ -8,10 +8,6 @@ google-auth-oauthlib==1.2.0
 pydrive2==1.17.0
 setuptools==68.2.2
 
-# Dependencias para serverless en Netlify
-netlify-lambda==0.4.0
-serverless-wsgi==3.0.2
-
 # Otras utilidades
 python-dotenv==1.0.0
 Jinja2==3.1.2
@@ -21,4 +17,3 @@ SQLAlchemy==2.0.23
 
 # Dependencias adicionales
 Werkzeug==3.0.1
-gunicorn==21.2.0

@@ -1,28 +1,41 @@
-from flask import Flask, request
+from flask import Flask, request, Response
 from app import app as flask_app
 import json
 
 def handler(event, context):
     """Función manejadora para Netlify Functions"""
-    # Convertir el evento de Netlify a un objeto de solicitud de Flask
+    # Obtener información de la solicitud
     path = event.get('path', '')
     method = event.get('httpMethod', 'GET')
     headers = event.get('headers', {})
     body = event.get('body', '')
     
+    # Convertir headers a formato Flask
+    flask_headers = {}
+    for key, value in headers.items():
+        flask_headers[key.lower()] = value
+    
     # Crear un contexto de solicitud de Flask
     with flask_app.test_request_context(
         path=path,
         method=method,
-        headers=headers,
+        headers=flask_headers,
         data=body
     ):
-        # Ejecutar la aplicación Flask
-        response = flask_app.full_dispatch_request()
-        
-        # Convertir la respuesta de Flask a un formato que Netlify entienda
-        return {
-            'statusCode': response.status_code,
-            'headers': dict(response.headers),
-            'body': response.get_data(as_text=True)
-        } 
+        try:
+            # Ejecutar la aplicación Flask
+            response = flask_app.full_dispatch_request()
+            
+            # Convertir la respuesta de Flask a un formato que Netlify entienda
+            return {
+                'statusCode': response.status_code,
+                'headers': dict(response.headers),
+                'body': response.get_data(as_text=True)
+            }
+        except Exception as e:
+            # Manejar errores
+            return {
+                'statusCode': 500,
+                'headers': {'Content-Type': 'application/json'},
+                'body': json.dumps({'error': str(e)})
+            } 
