@@ -1,17 +1,15 @@
 # Configuración para despliegue en Netlify
 
 [build]
-  command = """
-    pip install -r requirements.txt
-    pip install -r functions/requirements.txt
-  """
+  command = "pip install -r requirements.txt && pip install -r functions/requirements.txt"
   publish = "public"
   functions = "functions"
 
 # Configuración de la función serverless para Flask
 [functions]
   directory = "functions"
-  node_bundler = "esbuild"
+  external_node_modules = []
+  included_files = ["functions/requirements.txt"]
 
 # Redireccionar todo el tráfico a nuestra función de Flask
 [[redirects]]
