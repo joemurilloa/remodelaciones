@@ -5,7 +5,7 @@ from datetime import datetime
 from models import db, Cliente, Cotizacion, Factura, ItemCotizacion, ItemFactura
 import pdf_generator
 import backup_drive
-
+import logging
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'clave_secreta_para_desarrollo'
@@ -48,6 +48,15 @@ def nuevo_cliente():
         db.session.add(nuevo_cliente)
         db.session.commit()
         flash('Cliente agregado correctamente')
+        
+        # Exportar clientes a CSV después de agregar un nuevo cliente
+        try:
+            exito, mensaje = backup_drive.exportar_clientes_a_csv()
+            if not exito:
+                logging.error(f"Error al exportar clientes a CSV: {mensaje}")
+        except Exception as e:
+            logging.error(f"Error al exportar clientes a CSV: {str(e)}")
+        
         return redirect(url_for('listar_clientes'))
     
     return render_template('clientes/nuevo.html')
@@ -65,9 +74,19 @@ def editar_cliente(id):
         
         db.session.commit()
         flash('Cliente actualizado correctamente')
+        
+        # Exportar clientes a CSV después de editar un cliente
+        try:
+            exito, mensaje = backup_drive.exportar_clientes_a_csv()
+            if not exito:
+                logging.error(f"Error al exportar clientes a CSV: {mensaje}")
+        except Exception as e:
+            logging.error(f"Error al exportar clientes a CSV: {str(e)}")
+        
         return redirect(url_for('listar_clientes'))
     
     return render_template('clientes/editar.html', cliente=cliente)
+
 
 @app.route('/clientes/eliminar/<int:id>')
 def eliminar_cliente(id):
@@ -209,20 +228,27 @@ def pdf_factura(id):
 # Añadida la función marcar_factura_pagada que faltaba
 @app.route('/facturas/marcar-pagada/<int:id>', methods=['POST'])
 def marcar_factura_pagada(id):
-    factura = Factura.query.get_or_404(id)
-    factura.pagada = True
-    factura.fecha_pago = datetime.now()
-    db.session.commit()
-    flash('Factura marcada como pagada correctamente')
-    return redirect(url_for('ver_factura', id=factura.id))
+    try:
+        factura = Factura.query.get_or_404(id)
+        factura.pagada = True
+        factura.fecha_pago = datetime.now()
+        db.session.commit()
+        flash('Factura marcada como pagada correctamente')
+    except Exception as e:
+        db.session.rollback()
+        flash(f'Error al marcar factura como pagada: {str(e)}')
+    return redirect(url_for('ver_factura', id=id))
 
 # Ruta para iniciar backup manual
 @app.route('/backup')
 def realizar_backup():
     try:
-        backup_file = backup_drive.realizar_backup()
-        backup_drive.subir_a_drive(backup_file)
-        flash('Backup realizado correctamente')
+        # Utilizamos la nueva función de backup completo
+        exito, mensaje = backup_drive.realizar_backup_completo()
+        if exito:
+            flash(f'Backup realizado correctamente: {mensaje}')
+        else:
+            flash(f'Error al realizar backup: {mensaje}')
     except Exception as e:
         flash(f'Error al realizar el backup: {str(e)}')
     return redirect(url_for('home'))

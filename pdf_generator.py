@@ -172,6 +172,17 @@ def generar_pdf_cotizacion(cotizacion):
     # Generate PDF
     doc.build(elements)
     
+    # Sincronizar PDFs de cotizaciones con Google Drive
+    try:
+        import logging
+        import backup_drive
+        success, message = backup_drive.sincronizar_pdfs_cotizaciones()
+        if not success:
+            logging.error(f"Error al sincronizar cotizaciones con Drive: {message}")
+    except Exception as e:
+        import logging
+        logging.error(f"Error al sincronizar cotizaciones con Drive: {str(e)}")
+    
     return f"cotizacion_{cotizacion.id}.pdf"
 
 def generar_pdf_factura(factura):
@@ -347,5 +358,16 @@ def generar_pdf_factura(factura):
     
     # Generate PDF
     doc.build(elements)
+    
+    # Sincronizar PDFs de facturas con Google Drive
+    try:
+        import logging
+        import backup_drive
+        success, message = backup_drive.sincronizar_pdfs_facturas()
+        if not success:
+            logging.error(f"Error al sincronizar facturas con Drive: {message}")
+    except Exception as e:
+        import logging
+        logging.error(f"Error al sincronizar facturas con Drive: {str(e)}")
     
     return f"factura_{factura.id}.pdf"

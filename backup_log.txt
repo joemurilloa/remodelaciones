@@ -424,3 +424,340 @@
 2025-04-03 14:42:32,854 - INFO - 127.0.0.1 - - [03/Apr/2025 14:42:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
 2025-04-03 14:42:32,897 - INFO - 127.0.0.1 - - [03/Apr/2025 14:42:32] "[36mGET /facturas/pdf/4 HTTP/1.1[0m" 304 -
 2025-04-03 14:42:36,731 - INFO - 127.0.0.1 - - [03/Apr/2025 14:42:36] "GET /facturas/pdf/4 HTTP/1.1" 200 -
+2025-04-03 17:38:06,588 - INFO -  * Restarting with stat
+2025-04-03 17:38:08,518 - WARNING -  * Debugger is active!
+2025-04-03 17:38:08,521 - INFO -  * Debugger PIN: 115-265-897
+2025-04-03 17:38:08,581 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-03 17:38:13,703 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:13] "GET /facturas/ver/4 HTTP/1.1" 200 -
+2025-04-03 17:38:13,794 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:13] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-03 17:38:13,794 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:13] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-04-03 17:38:13,853 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:13] "GET /facturas/pdf/4 HTTP/1.1" 200 -
+2025-04-03 17:38:14,328 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-03 17:38:14,845 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:14] "GET / HTTP/1.1" 200 -
+2025-04-03 17:38:14,889 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:38:14,896 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:38:15,637 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:15] "GET / HTTP/1.1" 200 -
+2025-04-03 17:38:15,680 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:38:15,696 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:38:16,793 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:16] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 17:38:16,836 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:38:16,842 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:38:18,540 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:18] "GET /clientes/nuevo HTTP/1.1" 200 -
+2025-04-03 17:38:18,588 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:38:18,592 - INFO - 127.0.0.1 - - [03/Apr/2025 17:38:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:39:22,737 - INFO - 127.0.0.1 - - [03/Apr/2025 17:39:22] "[32mPOST /clientes/nuevo HTTP/1.1[0m" 302 -
+2025-04-03 17:39:22,753 - INFO - 127.0.0.1 - - [03/Apr/2025 17:39:22] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 17:39:22,806 - INFO - 127.0.0.1 - - [03/Apr/2025 17:39:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:39:22,806 - INFO - 127.0.0.1 - - [03/Apr/2025 17:39:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:39:26,485 - INFO - 127.0.0.1 - - [03/Apr/2025 17:39:26] "GET /facturas HTTP/1.1" 200 -
+2025-04-03 17:39:26,520 - INFO - 127.0.0.1 - - [03/Apr/2025 17:39:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:39:26,526 - INFO - 127.0.0.1 - - [03/Apr/2025 17:39:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:39:27,131 - INFO - 127.0.0.1 - - [03/Apr/2025 17:39:27] "GET /cotizaciones HTTP/1.1" 200 -
+2025-04-03 17:39:27,187 - INFO - 127.0.0.1 - - [03/Apr/2025 17:39:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:39:27,202 - INFO - 127.0.0.1 - - [03/Apr/2025 17:39:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:39:29,294 - INFO - 127.0.0.1 - - [03/Apr/2025 17:39:29] "GET /cotizaciones/nueva HTTP/1.1" 200 -
+2025-04-03 17:39:29,350 - INFO - 127.0.0.1 - - [03/Apr/2025 17:39:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:39:29,358 - INFO - 127.0.0.1 - - [03/Apr/2025 17:39:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:40:00,465 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:00] "[32mPOST /cotizaciones/nueva HTTP/1.1[0m" 302 -
+2025-04-03 17:40:00,497 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:00] "GET /cotizaciones/ver/5 HTTP/1.1" 200 -
+2025-04-03 17:40:00,542 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:40:00,542 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:40:00,630 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:00] "GET /cotizaciones/pdf/5 HTTP/1.1" 200 -
+2025-04-03 17:40:04,068 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:04] "GET /cotizaciones/pdf/5 HTTP/1.1" 200 -
+2025-04-03 17:40:17,228 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:17] "[32mGET /cotizaciones/a-factura/5 HTTP/1.1[0m" 302 -
+2025-04-03 17:40:17,244 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:17] "GET /facturas/ver/5 HTTP/1.1" 200 -
+2025-04-03 17:40:17,291 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:40:17,299 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:40:17,369 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:17] "GET /facturas/pdf/5 HTTP/1.1" 200 -
+2025-04-03 17:40:19,475 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:19] "[32mPOST /facturas/marcar-pagada/5 HTTP/1.1[0m" 302 -
+2025-04-03 17:40:19,507 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:19] "GET /facturas/ver/5 HTTP/1.1" 200 -
+2025-04-03 17:40:19,564 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:40:19,570 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:40:19,590 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:19] "[36mGET /facturas/pdf/5 HTTP/1.1[0m" 304 -
+2025-04-03 17:40:23,201 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:23] "GET /facturas HTTP/1.1" 200 -
+2025-04-03 17:40:23,258 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:40:23,278 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:23] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:40:28,994 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:28] "GET /facturas/ver/1 HTTP/1.1" 200 -
+2025-04-03 17:40:29,043 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:40:29,043 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:40:29,091 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:29] "GET /facturas/pdf/1 HTTP/1.1" 200 -
+2025-04-03 17:40:34,536 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:34] "GET /facturas/pdf/1 HTTP/1.1" 200 -
+2025-04-03 17:40:49,571 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:49] "GET /cotizaciones HTTP/1.1" 200 -
+2025-04-03 17:40:49,618 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:40:49,630 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:40:56,192 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:56] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 17:40:56,245 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:40:56,247 - INFO - 127.0.0.1 - - [03/Apr/2025 17:40:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:41:00,871 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:00] "GET / HTTP/1.1" 200 -
+2025-04-03 17:41:00,920 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:41:00,933 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:41:04,450 - INFO - Backup local creado: backups\backup_20250403_174104.db
+2025-04-03 17:41:04,450 - ERROR - Archivo de credenciales credentials.json no encontrado
+2025-04-03 17:41:04,450 - ERROR - Error al subir backup a Google Drive: Archivo de credenciales credentials.json no encontrado
+2025-04-03 17:41:04,452 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:04] "[32mGET /backup HTTP/1.1[0m" 302 -
+2025-04-03 17:41:04,466 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:04] "GET / HTTP/1.1" 200 -
+2025-04-03 17:41:04,497 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:41:04,513 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:41:07,274 - INFO - Backup local creado: backups\backup_20250403_174107.db
+2025-04-03 17:41:07,274 - ERROR - Archivo de credenciales credentials.json no encontrado
+2025-04-03 17:41:07,275 - ERROR - Error al subir backup a Google Drive: Archivo de credenciales credentials.json no encontrado
+2025-04-03 17:41:07,278 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:07] "[32mGET /backup HTTP/1.1[0m" 302 -
+2025-04-03 17:41:07,284 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:07] "GET / HTTP/1.1" 200 -
+2025-04-03 17:41:07,350 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:41:07,357 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:41:51,142 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:51] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 17:41:51,201 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:41:51,207 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:41:51,820 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:51] "GET / HTTP/1.1" 200 -
+2025-04-03 17:41:51,863 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:41:51,869 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:41:52,485 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:52] "GET /cotizaciones HTTP/1.1" 200 -
+2025-04-03 17:41:52,520 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:41:52,526 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:41:52,969 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:52] "GET /facturas HTTP/1.1" 200 -
+2025-04-03 17:41:53,002 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:41:53,007 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:41:53,680 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:53] "GET / HTTP/1.1" 200 -
+2025-04-03 17:41:53,738 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:41:53,746 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:41:54,181 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:54] "GET / HTTP/1.1" 200 -
+2025-04-03 17:41:54,239 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:41:54,252 - INFO - 127.0.0.1 - - [03/Apr/2025 17:41:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:42:40,911 - INFO - 127.0.0.1 - - [03/Apr/2025 17:42:40] "GET /cotizaciones HTTP/1.1" 200 -
+2025-04-03 17:42:40,959 - INFO - 127.0.0.1 - - [03/Apr/2025 17:42:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:42:40,964 - INFO - 127.0.0.1 - - [03/Apr/2025 17:42:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:42:45,721 - INFO - 127.0.0.1 - - [03/Apr/2025 17:42:45] "GET /cotizaciones/ver/1 HTTP/1.1" 200 -
+2025-04-03 17:42:45,757 - INFO - 127.0.0.1 - - [03/Apr/2025 17:42:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:42:45,761 - INFO - 127.0.0.1 - - [03/Apr/2025 17:42:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:42:45,802 - INFO - 127.0.0.1 - - [03/Apr/2025 17:42:45] "GET /cotizaciones/pdf/1 HTTP/1.1" 200 -
+2025-04-03 17:42:49,280 - INFO - 127.0.0.1 - - [03/Apr/2025 17:42:49] "GET / HTTP/1.1" 200 -
+2025-04-03 17:42:49,350 - INFO - 127.0.0.1 - - [03/Apr/2025 17:42:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:42:49,350 - INFO - 127.0.0.1 - - [03/Apr/2025 17:42:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:43:01,942 - INFO - 127.0.0.1 - - [03/Apr/2025 17:43:01] "GET / HTTP/1.1" 200 -
+2025-04-03 17:43:02,004 - INFO - 127.0.0.1 - - [03/Apr/2025 17:43:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:43:02,004 - INFO - 127.0.0.1 - - [03/Apr/2025 17:43:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:43:56,869 - INFO - 127.0.0.1 - - [03/Apr/2025 17:43:56] "GET /cotizaciones HTTP/1.1" 200 -
+2025-04-03 17:43:56,904 - INFO - 127.0.0.1 - - [03/Apr/2025 17:43:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:43:56,908 - INFO - 127.0.0.1 - - [03/Apr/2025 17:43:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:43:59,843 - INFO - 127.0.0.1 - - [03/Apr/2025 17:43:59] "GET /cotizaciones/pdf/1 HTTP/1.1" 200 -
+2025-04-03 17:44:05,392 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:05] "[32mGET /cotizaciones/a-factura/1 HTTP/1.1[0m" 302 -
+2025-04-03 17:44:05,407 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:05] "GET /facturas/ver/6 HTTP/1.1" 200 -
+2025-04-03 17:44:05,446 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:44:05,455 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:44:05,548 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:05] "GET /facturas/pdf/6 HTTP/1.1" 200 -
+2025-04-03 17:44:07,547 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:07] "[32mPOST /facturas/marcar-pagada/6 HTTP/1.1[0m" 302 -
+2025-04-03 17:44:07,568 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:07] "GET /facturas/ver/6 HTTP/1.1" 200 -
+2025-04-03 17:44:07,624 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:44:07,632 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:44:07,663 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:07] "[36mGET /facturas/pdf/6 HTTP/1.1[0m" 304 -
+2025-04-03 17:44:10,027 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:10] "GET /facturas/pdf/6 HTTP/1.1" 200 -
+2025-04-03 17:44:32,114 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:32] "GET /facturas HTTP/1.1" 200 -
+2025-04-03 17:44:32,181 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:44:32,202 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:44:38,531 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:38] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 17:44:38,596 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:44:38,603 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:44:40,372 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:40] "GET /cotizaciones/nueva?cliente_id=1 HTTP/1.1" 200 -
+2025-04-03 17:44:40,407 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:44:40,411 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:44:43,403 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:43] "GET /cotizaciones HTTP/1.1" 200 -
+2025-04-03 17:44:43,459 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:44:43,459 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:44:47,821 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:47] "[32mGET /cotizaciones/a-factura/1 HTTP/1.1[0m" 302 -
+2025-04-03 17:44:47,834 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:47] "GET /facturas/ver/7 HTTP/1.1" 200 -
+2025-04-03 17:44:47,875 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:44:47,880 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:44:47,939 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:47] "GET /facturas/pdf/7 HTTP/1.1" 200 -
+2025-04-03 17:44:58,154 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:58] "GET /cotizaciones HTTP/1.1" 200 -
+2025-04-03 17:44:58,210 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:44:58,226 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:44:59,582 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:59] "GET /facturas HTTP/1.1" 200 -
+2025-04-03 17:44:59,632 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:44:59,637 - INFO - 127.0.0.1 - - [03/Apr/2025 17:44:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:45:01,243 - INFO - 127.0.0.1 - - [03/Apr/2025 17:45:01] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 17:45:01,307 - INFO - 127.0.0.1 - - [03/Apr/2025 17:45:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:45:01,313 - INFO - 127.0.0.1 - - [03/Apr/2025 17:45:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:45:02,564 - INFO - 127.0.0.1 - - [03/Apr/2025 17:45:02] "GET / HTTP/1.1" 200 -
+2025-04-03 17:45:02,612 - INFO - 127.0.0.1 - - [03/Apr/2025 17:45:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:45:02,615 - INFO - 127.0.0.1 - - [03/Apr/2025 17:45:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:45:03,640 - INFO - 127.0.0.1 - - [03/Apr/2025 17:45:03] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 17:45:03,684 - INFO - 127.0.0.1 - - [03/Apr/2025 17:45:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:45:03,692 - INFO - 127.0.0.1 - - [03/Apr/2025 17:45:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:46:01,297 - INFO - 127.0.0.1 - - [03/Apr/2025 17:46:01] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 17:46:01,349 - INFO - 127.0.0.1 - - [03/Apr/2025 17:46:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:46:01,349 - INFO - 127.0.0.1 - - [03/Apr/2025 17:46:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:46:02,541 - INFO - 127.0.0.1 - - [03/Apr/2025 17:46:02] "GET /clientes/nuevo HTTP/1.1" 200 -
+2025-04-03 17:46:02,572 - INFO - 127.0.0.1 - - [03/Apr/2025 17:46:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:46:02,576 - INFO - 127.0.0.1 - - [03/Apr/2025 17:46:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:47:33,290 - INFO - 127.0.0.1 - - [03/Apr/2025 17:47:33] "GET / HTTP/1.1" 200 -
+2025-04-03 17:47:33,327 - INFO - 127.0.0.1 - - [03/Apr/2025 17:47:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:47:33,333 - INFO - 127.0.0.1 - - [03/Apr/2025 17:47:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:48:36,963 - INFO -  * Detected change in 'C:\\Users\\joemurilloa\\Documents\\remodelaciones\\app.py', reloading
+2025-04-03 17:48:37,173 - INFO -  * Restarting with stat
+2025-04-03 17:48:40,022 - WARNING -  * Debugger is active!
+2025-04-03 17:48:40,029 - INFO -  * Debugger PIN: 115-265-897
+2025-04-03 17:48:40,106 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-03 17:48:40,999 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:40] "GET / HTTP/1.1" 200 -
+2025-04-03 17:48:41,145 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:48:41,145 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:48:42,374 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:42] "GET / HTTP/1.1" 200 -
+2025-04-03 17:48:42,412 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:48:42,412 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:48:42,906 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:42] "GET /cotizaciones HTTP/1.1" 200 -
+2025-04-03 17:48:42,929 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:48:42,944 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:48:48,568 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:48] "[32mGET /cotizaciones/a-factura/1 HTTP/1.1[0m" 302 -
+2025-04-03 17:48:48,600 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:48] "GET /facturas/ver/8 HTTP/1.1" 200 -
+2025-04-03 17:48:48,642 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:48:48,644 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:48:48,716 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:48] "GET /facturas/pdf/8 HTTP/1.1" 200 -
+2025-04-03 17:48:49,909 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:49] "[32mPOST /facturas/marcar-pagada/8 HTTP/1.1[0m" 302 -
+2025-04-03 17:48:49,930 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:49] "GET /facturas/ver/8 HTTP/1.1" 200 -
+2025-04-03 17:48:49,997 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:48:50,003 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:48:50,021 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:50] "[36mGET /facturas/pdf/8 HTTP/1.1[0m" 304 -
+2025-04-03 17:48:52,365 - INFO - 127.0.0.1 - - [03/Apr/2025 17:48:52] "GET /facturas/pdf/8 HTTP/1.1" 200 -
+2025-04-03 17:49:00,722 - INFO - 127.0.0.1 - - [03/Apr/2025 17:49:00] "[36mGET /facturas/pdf/8 HTTP/1.1[0m" 304 -
+2025-04-03 17:51:33,952 - INFO -  * Detected change in 'C:\\Users\\joemurilloa\\Documents\\remodelaciones\\backup_drive.py', reloading
+2025-04-03 17:51:34,177 - INFO -  * Restarting with stat
+2025-04-03 17:51:36,801 - WARNING -  * Debugger is active!
+2025-04-03 17:51:36,806 - INFO -  * Debugger PIN: 115-265-897
+2025-04-03 17:51:36,907 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-03 17:52:09,496 - INFO -  * Detected change in 'C:\\Users\\joemurilloa\\Documents\\remodelaciones\\app.py', reloading
+2025-04-03 17:52:09,709 - INFO -  * Restarting with stat
+2025-04-03 17:52:12,112 - WARNING -  * Debugger is active!
+2025-04-03 17:52:12,120 - INFO -  * Debugger PIN: 115-265-897
+2025-04-03 17:52:12,184 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-03 17:53:04,640 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:04] "GET /facturas/ver/8 HTTP/1.1" 200 -
+2025-04-03 17:53:04,821 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:53:04,827 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:53:04,866 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:04] "[36mGET /facturas/pdf/8 HTTP/1.1[0m" 304 -
+2025-04-03 17:53:06,258 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:06] "GET / HTTP/1.1" 200 -
+2025-04-03 17:53:06,321 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:53:06,337 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:53:07,632 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:07] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 17:53:07,690 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:53:07,696 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:53:09,154 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:09] "GET /clientes/nuevo HTTP/1.1" 200 -
+2025-04-03 17:53:09,210 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:53:09,216 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:53:27,475 - ERROR - Archivo de credenciales credentials.json no encontrado
+2025-04-03 17:53:27,475 - ERROR - Error al exportar clientes a CSV: Archivo de credenciales credentials.json no encontrado
+2025-04-03 17:53:27,476 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:27] "[32mPOST /clientes/nuevo HTTP/1.1[0m" 302 -
+2025-04-03 17:53:27,491 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:27] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 17:53:27,547 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:53:27,554 - INFO - 127.0.0.1 - - [03/Apr/2025 17:53:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:54:20,450 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:20] "GET / HTTP/1.1" 200 -
+2025-04-03 17:54:20,507 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:54:20,512 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:20] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:54:22,595 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:22] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 17:54:22,652 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:54:22,661 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:54:30,944 - INFO -  * Restarting with stat
+2025-04-03 17:54:33,493 - WARNING -  * Debugger is active!
+2025-04-03 17:54:33,509 - INFO -  * Debugger PIN: 115-265-897
+2025-04-03 17:54:33,619 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-03 17:54:33,755 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:33] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 17:54:33,870 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:54:33,964 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:54:37,600 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:37] "[32mGET /clientes/eliminar/3 HTTP/1.1[0m" 302 -
+2025-04-03 17:54:37,622 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:37] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 17:54:37,687 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:54:37,702 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:54:38,481 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:38] "GET /clientes/nuevo HTTP/1.1" 200 -
+2025-04-03 17:54:38,532 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:54:38,537 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 17:54:43,142 - ERROR - Archivo de credenciales credentials.json no encontrado
+2025-04-03 17:54:43,142 - ERROR - Error al exportar clientes a CSV: Archivo de credenciales credentials.json no encontrado
+2025-04-03 17:54:43,149 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:43] "[32mPOST /clientes/nuevo HTTP/1.1[0m" 302 -
+2025-04-03 17:54:43,166 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:43] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 17:54:43,231 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 17:54:43,236 - INFO - 127.0.0.1 - - [03/Apr/2025 17:54:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:05:08,274 - INFO - 127.0.0.1 - - [03/Apr/2025 18:05:08] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 18:05:08,316 - INFO - 127.0.0.1 - - [03/Apr/2025 18:05:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:05:08,316 - INFO - 127.0.0.1 - - [03/Apr/2025 18:05:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:05:09,765 - INFO - Backup local creado: backups\backup_20250403_180509.db
+2025-04-03 18:07:34,856 - INFO - Backup local creado: backups\backup_20250403_180734.db
+2025-04-03 18:07:45,023 - INFO - "GET /?state=tuZkwXK9WLD2UQ25grGUmPLBcw45qt&code=4/0Ab_5qllGhvTCnE1dDzLUnHyhRkNr7AB0gqFj0zVo7Imzrhz0u7WzUpNz-80mqDnAKwoXcA&scope=https://www.googleapis.com/auth/drive.file HTTP/1.1" 200 65
+2025-04-03 18:07:45,332 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-04-03 18:07:46,637 - INFO - Carpeta de backup creada: 1lkB667s5a4tzTlzUwQR0JUt6Qy-BkrhL
+2025-04-03 18:07:47,586 - INFO - Backup subido a Google Drive: 19CyCgRYko9ImK87fCNHHCYbHogxQRhpz
+2025-04-03 18:07:47,782 - INFO - 127.0.0.1 - - [03/Apr/2025 18:07:47] "[32mGET /backup HTTP/1.1[0m" 302 -
+2025-04-03 18:07:47,792 - INFO - 127.0.0.1 - - [03/Apr/2025 18:07:47] "GET / HTTP/1.1" 200 -
+2025-04-03 18:07:47,833 - INFO - 127.0.0.1 - - [03/Apr/2025 18:07:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:07:47,869 - INFO - 127.0.0.1 - - [03/Apr/2025 18:07:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:07:52,689 - INFO - 127.0.0.1 - - [03/Apr/2025 18:07:52] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 18:07:52,749 - INFO - 127.0.0.1 - - [03/Apr/2025 18:07:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:07:52,756 - INFO - 127.0.0.1 - - [03/Apr/2025 18:07:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:35:41,924 - INFO -  * Restarting with stat
+2025-04-03 18:35:44,564 - WARNING -  * Debugger is active!
+2025-04-03 18:35:44,564 - INFO -  * Debugger PIN: 115-265-897
+2025-04-03 18:35:44,669 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-03 18:35:44,800 - INFO - 127.0.0.1 - - [03/Apr/2025 18:35:44] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 18:35:44,914 - INFO - 127.0.0.1 - - [03/Apr/2025 18:35:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:35:44,971 - INFO - 127.0.0.1 - - [03/Apr/2025 18:35:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:35:47,831 - INFO - 127.0.0.1 - - [03/Apr/2025 18:35:47] "GET / HTTP/1.1" 200 -
+2025-04-03 18:35:47,879 - INFO - 127.0.0.1 - - [03/Apr/2025 18:35:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:35:47,887 - INFO - 127.0.0.1 - - [03/Apr/2025 18:35:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:35:49,122 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-04-03 18:35:50,013 - INFO - Carpeta 'sistema_cotizaciones_backups' encontrada: 1lkB667s5a4tzTlzUwQR0JUt6Qy-BkrhL
+2025-04-03 18:35:51,039 - INFO - CSV de clientes creado en Google Drive: 1CjGQRbfuTvH7xty2JH9GpQiAgWwpCiqj
+2025-04-03 18:35:51,040 - ERROR - Error al exportar clientes a CSV: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'temp\\clientes.csv'
+2025-04-03 18:35:51,040 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-04-03 18:35:51,925 - INFO - Carpeta 'sistema_cotizaciones_backups' encontrada: 1lkB667s5a4tzTlzUwQR0JUt6Qy-BkrhL
+2025-04-03 18:35:52,655 - INFO - Carpeta 'cotizaciones' creada: 1iDCtk2NdUJVM9mvGDZiIfAd7B9zcxUfP
+2025-04-03 18:35:58,950 - INFO - Sincronización de cotizaciones completada: 5 nuevos, 0 actualizados.
+2025-04-03 18:35:58,954 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-04-03 18:35:59,777 - INFO - Carpeta 'sistema_cotizaciones_backups' encontrada: 1lkB667s5a4tzTlzUwQR0JUt6Qy-BkrhL
+2025-04-03 18:36:00,282 - INFO - Carpeta 'facturas' creada: 16f_nC4jneZDCX9s4FpZnrWE1OgeiiJta
+2025-04-03 18:36:10,690 - INFO - Sincronización de facturas completada: 8 nuevas, 0 actualizadas.
+2025-04-03 18:36:10,690 - INFO - Backup completo realizado con éxito
+2025-04-03 18:36:10,693 - INFO - 127.0.0.1 - - [03/Apr/2025 18:36:10] "[32mGET /backup HTTP/1.1[0m" 302 -
+2025-04-03 18:36:10,707 - INFO - 127.0.0.1 - - [03/Apr/2025 18:36:10] "GET / HTTP/1.1" 200 -
+2025-04-03 18:36:10,784 - INFO - 127.0.0.1 - - [03/Apr/2025 18:36:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:36:10,786 - INFO - 127.0.0.1 - - [03/Apr/2025 18:36:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:36:36,744 - INFO - 127.0.0.1 - - [03/Apr/2025 18:36:36] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 18:36:36,798 - INFO - 127.0.0.1 - - [03/Apr/2025 18:36:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:36:36,804 - INFO - 127.0.0.1 - - [03/Apr/2025 18:36:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:36:38,264 - INFO - 127.0.0.1 - - [03/Apr/2025 18:36:38] "GET /clientes/nuevo HTTP/1.1" 200 -
+2025-04-03 18:36:38,299 - INFO - 127.0.0.1 - - [03/Apr/2025 18:36:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:36:38,301 - INFO - 127.0.0.1 - - [03/Apr/2025 18:36:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:37:09,470 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-04-03 18:37:10,364 - INFO - Carpeta 'sistema_cotizaciones_backups' encontrada: 1lkB667s5a4tzTlzUwQR0JUt6Qy-BkrhL
+2025-04-03 18:37:11,544 - INFO - CSV de clientes actualizado en Google Drive: 1CjGQRbfuTvH7xty2JH9GpQiAgWwpCiqj
+2025-04-03 18:37:11,544 - ERROR - Error al exportar clientes a CSV: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'temp\\clientes.csv'
+2025-04-03 18:37:11,544 - ERROR - Error al exportar clientes a CSV: Error al exportar clientes: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'temp\\clientes.csv'
+2025-04-03 18:37:11,545 - INFO - 127.0.0.1 - - [03/Apr/2025 18:37:11] "[32mPOST /clientes/nuevo HTTP/1.1[0m" 302 -
+2025-04-03 18:37:11,558 - INFO - 127.0.0.1 - - [03/Apr/2025 18:37:11] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 18:37:11,601 - INFO - 127.0.0.1 - - [03/Apr/2025 18:37:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:37:11,604 - INFO - 127.0.0.1 - - [03/Apr/2025 18:37:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:42:42,329 - INFO - 127.0.0.1 - - [03/Apr/2025 18:42:42] "GET /clientes/nuevo HTTP/1.1" 200 -
+2025-04-03 18:42:42,365 - INFO - 127.0.0.1 - - [03/Apr/2025 18:42:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:42:42,371 - INFO - 127.0.0.1 - - [03/Apr/2025 18:42:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:43:17,473 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-04-03 18:43:18,332 - INFO - Carpeta 'sistema_cotizaciones_backups' encontrada: 1lkB667s5a4tzTlzUwQR0JUt6Qy-BkrhL
+2025-04-03 18:43:19,633 - INFO - CSV de clientes actualizado en Google Drive: 1CjGQRbfuTvH7xty2JH9GpQiAgWwpCiqj
+2025-04-03 18:43:19,633 - ERROR - Error al exportar clientes a CSV: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'temp\\clientes.csv'
+2025-04-03 18:43:19,649 - ERROR - Error al exportar clientes a CSV: Error al exportar clientes: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'temp\\clientes.csv'
+2025-04-03 18:43:19,649 - INFO - 127.0.0.1 - - [03/Apr/2025 18:43:19] "[32mPOST /clientes/nuevo HTTP/1.1[0m" 302 -
+2025-04-03 18:43:19,665 - INFO - 127.0.0.1 - - [03/Apr/2025 18:43:19] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 18:43:19,729 - INFO - 127.0.0.1 - - [03/Apr/2025 18:43:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:43:19,741 - INFO - 127.0.0.1 - - [03/Apr/2025 18:43:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:46:30,785 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:30] "GET / HTTP/1.1" 200 -
+2025-04-03 18:46:30,820 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:46:30,824 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:46:31,567 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:31] "GET / HTTP/1.1" 200 -
+2025-04-03 18:46:31,619 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:46:31,619 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:46:32,024 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:32] "GET /clientes HTTP/1.1" 200 -
+2025-04-03 18:46:32,086 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:46:32,092 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:46:34,169 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:34] "GET /cotizaciones HTTP/1.1" 200 -
+2025-04-03 18:46:34,195 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:46:34,211 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:46:35,020 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:35] "GET /facturas HTTP/1.1" 200 -
+2025-04-03 18:46:35,069 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:46:35,073 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-03 18:46:37,169 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:37] "GET /cotizaciones HTTP/1.1" 200 -
+2025-04-03 18:46:37,232 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-03 18:46:37,241 - INFO - 127.0.0.1 - - [03/Apr/2025 18:46:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
