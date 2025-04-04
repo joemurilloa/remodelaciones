@@ -253,5 +253,9 @@ def realizar_backup():
         flash(f'Error al realizar el backup: {str(e)}')
     return redirect(url_for('home'))
 
+@app.route('/saludz')
+def health_check():
+    return "OK", 200
+
 if __name__ == '__main__':
     app.run(debug=True)
