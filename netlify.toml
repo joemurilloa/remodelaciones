@@ -8,7 +8,6 @@
 # Configuración de la función serverless para Flask
 [functions]
   directory = "functions"
-  node_bundler = "esbuild"
 
 # Redireccionar todo el tráfico a nuestra función de Flask
 [[redirects]]

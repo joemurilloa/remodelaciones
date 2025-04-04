@@ -1,6 +1,11 @@
 from flask import Flask, request, Response
-from app import app as flask_app
 import json
+import os
+import sys
+
+# Agregar el directorio padre al path para poder importar la aplicación principal
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from app import app as flask_app
 
 def handler(event, context):
     """Función manejadora para Netlify Functions"""
