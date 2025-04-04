@@ -1,15 +1,17 @@
 # Configuración para despliegue en Netlify
 
 [build]
-  command = "pip install -r requirements.txt"
+  command = """
+    pip install -r requirements.txt
+    pip install -r functions/requirements.txt
+  """
   publish = "public"
   functions = "functions"
 
 # Configuración de la función serverless para Flask
 [functions]
   directory = "functions"
-  external_node_modules = []
-  included_files = ["functions/requirements.txt"]
+  node_bundler = "esbuild"
 
 # Redireccionar todo el tráfico a nuestra función de Flask
 [[redirects]]
@@ -21,4 +23,4 @@
 # Configuración de variables de entorno
 [build.environment]
   PYTHON_VERSION = "3.12"
-  PIPENV_VENV_IN_PROJECT = "true"
+  AWS_LAMBDA_JS_RUNTIME = "nodejs18.x"
