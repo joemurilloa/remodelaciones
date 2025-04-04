@@ -1,34 +1,46 @@
-from flask import Flask, Response, jsonify
 import json
-
-# Crear la aplicación Flask
-app = Flask(__name__)
-
-@app.route('/', methods=['GET'])
-def home():
-    return {'message': 'API funcionando correctamente'}
-
-@app.route('/api/cotizacion', methods=['POST'])
-def cotizacion():
-    try:
-        return {'message': 'Endpoint de cotización'}
-    except Exception as e:
-        return {'error': str(e)}, 500
 
 def handler(event, context):
     """Función manejadora para Netlify Functions"""
     try:
-        # Retornar una respuesta simple para probar
+        # Obtener el path y método de la solicitud
+        path = event.get('path', '').replace('/.netlify/functions/app', '') or '/'
+        method = event.get('httpMethod', 'GET')
+        
+        # Manejar diferentes rutas
+        if path == '/' and method == 'GET':
+            response_body = {
+                'message': 'API funcionando correctamente',
+                'status': 'success'
+            }
+        elif path == '/api/cotizacion' and method == 'POST':
+            response_body = {
+                'message': 'Endpoint de cotización',
+                'status': 'success'
+            }
+        else:
+            response_body = {
+                'message': f'Ruta no encontrada: {path}',
+                'status': 'error'
+            }
+            return {
+                'statusCode': 404,
+                'headers': {
+                    'Content-Type': 'application/json'
+                },
+                'body': json.dumps(response_body)
+            }
+
+        # Retornar respuesta exitosa
         return {
             'statusCode': 200,
             'headers': {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
             },
-            'body': json.dumps({
-                'message': 'API funcionando correctamente',
-                'path': event.get('path', ''),
-                'method': event.get('httpMethod', 'GET')
-            })
+            'body': json.dumps(response_body)
         }
     except Exception as e:
         return {
@@ -37,6 +49,7 @@ def handler(event, context):
                 'Content-Type': 'application/json'
             },
             'body': json.dumps({
-                'error': str(e)
+                'message': str(e),
+                'status': 'error'
             })
         } 
