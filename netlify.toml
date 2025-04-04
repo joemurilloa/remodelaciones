@@ -8,13 +8,17 @@
 # Configuración de la función serverless para Flask
 [functions]
   directory = "functions"
+  external_node_modules = []
+  included_files = ["functions/requirements.txt"]
 
 # Redireccionar todo el tráfico a nuestra función de Flask
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/app"
   status = 200
+  force = true
 
 # Configuración de variables de entorno
 [build.environment]
   PYTHON_VERSION = "3.12"
+  PIPENV_VENV_IN_PROJECT = "true"
